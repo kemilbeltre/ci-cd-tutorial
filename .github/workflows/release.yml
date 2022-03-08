@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create SNAPSHOT
-        run:  npm version prerelease --no-git-tag-version
+        run:  npm version prerelease --preid SNAPSHOT --no-git-tag-version
 
       - name: Update version in remote
         run: |
