@@ -36,7 +36,7 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: Get package version
-        run: echo "::set-output name=tag-version::$(jq '.version' package.json | sed 's/.0//' | xargs npm version --no-git-tag-version | sed 's/v//')"
+        run: echo "::set-output name=tag-version::$(jq '.version' package.json | sed 's/-SNAPSHOT.0//' | xargs npm version --no-git-tag-version | sed 's/v//')"
         id: version
         shell: bash
 
