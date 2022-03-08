@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Running Unit Test
+  release:
+    name: Release
     runs-on: ubuntu-latest
     env:
       NODE_ENV: test
